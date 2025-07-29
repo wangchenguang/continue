@@ -1,25 +1,66 @@
 {
   "compilerOptions": {
+    // 编译目标：使用最新的 ECMAScript 版本，支持最新的 JS 特性
     "target": "ESNext",
+    
+    // 使用标准的类字段定义行为（ES2022 标准）
     "useDefineForClassFields": true,
+    
+    // 可用的库：DOM API、DOM 迭代器、最新 ES 特性和 ES2021 特性
     "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2021"],
+    
+    // 允许编译 JavaScript 文件
     "allowJs": true,
+    
+    // 跳过库文件的类型检查，提高编译速度
     "skipLibCheck": true,
+    
+    // 启用 ES 模块与 CommonJS 模块的互操作性
     "esModuleInterop": true,
+    
+    // 允许从没有默认导出的模块中默认导入
     "allowSyntheticDefaultImports": true,
+    
+    // 启用严格模式，包含所有严格类型检查选项
     "strict": true,
+    
+    // 强制文件名大小写一致性检查
     "forceConsistentCasingInFileNames": true,
+    
+    // 模块系统：使用最新的 ES 模块标准
     "module": "ESNext",
+    
+    // 模块解析策略：使用打包工具的解析方式（支持 package.json 的 exports 字段）
     "moduleResolution": "Bundler",
+    
+    // 允许导入 JSON 文件作为模块
     "resolveJsonModule": true,
+    
+    // 确保每个文件都可以独立编译（用于构建工具优化）
     "isolatedModules": true,
+    
+    // 不生成输出文件，仅进行类型检查
     "noEmit": true,
+    
+    // JSX 编译方式：使用 React 17+ 的新 JSX 转换
     "jsx": "react-jsx",
+    
+    // 即使有错误也不阻止编译过程
     "noEmitOnError": false,
+    
+    // 启用实验性装饰器支持
     "experimentalDecorators": true,
+    
+    // 为装饰器生成元数据（用于反射）
     "emitDecoratorMetadata": true,
+    
+    // 包含的类型定义：Jest 测试框架和 Node.js 环境
     "types": ["jest", "node"]
   },
+  
+  // 包含的文件模式：所有 TypeScript、JavaScript 和类型定义文件
   "include": ["./**/*.ts", "./**/*.js", "./**/*.d.ts"],
+  
+  // 排除的目录：构建输出目录
   "exclude": ["dist"]
 }
